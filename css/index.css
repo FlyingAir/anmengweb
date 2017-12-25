@@ -1,0 +1,41 @@
+@media only screen and (max-width:1480px) {
+    .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        background-color: #a72222;
+    }
+    .swiper-container {
+        width: 942px;
+        height: 100px;
+        margin: 0!important;
+    }
+    .banner-content {
+        display: flex;
+    }
+    .nav-content {
+        flex: auto;
+        height: 100px;
+        background-color: #ededed;
+    }
+}
+
+@media only screen and (min-width:1480px) {
+    .wrap {
+        width: 1463px;
+        margin: 0 auto;
+        background-color: #643636;
+    }
+    .swiper-container {
+        width: 1147px;
+        height: 100px;
+        margin: 0!important;
+    }
+    .banner-content {
+        display: flex;
+    }
+    .nav-content {
+        flex: auto;
+        height: 100px;
+        background-color: #ededed;
+    }
+}
