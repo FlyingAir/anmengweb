@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/foundation-datepicker.min.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="wrap">
+            <div class="top-items">
+                <ul>
+                    <li><a href="apply.html">预约参观</a></li>
+                    <li class="active-item"><a href="apply-calendar.html">校行事历</a></li>
+                </ul>
+            </div>
+            <img class="logo" src="imgs/logo.png" alt="">
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="banner-content wrap">
+            <div class="swiper-container main-container appointment">
+                <header>校行事历 <span class="download-btn">点击下载<i class="v-icon"></i></span></header>
+                <div id="pageContent">
+                    <div id="imgContainer">
+                        <img id="imageFullScreen" src="imgs/calendar.png" />
+                    </div>
+                    <div id="positionButtonDiv">
+                        <div><span> <img id="zoomInButton" class="zoomButton" src="imgs/zoomIn.png" title="zoom in" alt="zoom in" /> <img id="zoomOutButton" class="zoomButton" src="imgs/zoomOut.png" title="zoom out" alt="zoom out" /> </span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content">
+                <ul>
+                    <li>
+                        <a href="./ablout.html">
+                            <div><img src="imgs/nav01-b.png" alt=""></div>
+                            <header>关于我们</header>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mengte.html">
+                            <div><img src="imgs/nav02-b.png" alt=""></div>
+                            <header>教学特色</header>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./apply.html">
+                            <div><img src="imgs/nav03.png" alt=""></div>
+                            <header>申请入学</header>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./news.html">
+                            <div><img src="imgs/nav04-b.png" alt=""></div>
+                            <header>最新动态</header>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bar">
+        <div class="wrap">
+            <img src="imgs/foot.png" alt="" style="width:100%">
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/foundation-datepicker.js"></script>
+    <script src="js/foundation-datepicker.zh-CN.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/e-smart-zoom-jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        $('#imageFullScreen').smartZoom({ 'containerClass': 'zoomableContainer' });
+
+        $('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
+
+        $('#zoomInButton,#zoomOutButton').bind("click", zoomButtonClickHandler);
+
+
+
+        function zoomButtonClickHandler(e) {
+
+            var scaleToAdd = 0.8;
+
+            if (e.target.id == 'zoomOutButton')
+
+                scaleToAdd = -scaleToAdd;
+
+            $('#imageFullScreen').smartZoom('zoom', scaleToAdd);
+
+        }
+
+        function moveButtonClickHandler(e) {
+
+            var pixelsToMoveOnX = 0;
+
+            var pixelsToMoveOnY = 0;
+
+
+
+            switch (e.target.id) {
+
+                case "leftPositionMap":
+
+                    pixelsToMoveOnX = 50;
+
+                    break;
+
+                case "rightPositionMap":
+
+                    pixelsToMoveOnX = -50;
+
+                    break;
+
+                case "topPositionMap":
+
+                    pixelsToMoveOnY = 50;
+
+                    break;
+
+                case "bottomPositionMap":
+
+                    pixelsToMoveOnY = -50;
+
+                    break;
+
+            }
+
+            $('#imageFullScreen').smartZoom('pan', pixelsToMoveOnX, pixelsToMoveOnY);
+
+        }
+
+    });
+    </script>
+</body>
+
+</html>

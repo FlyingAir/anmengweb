@@ -14,56 +14,69 @@
 
 <body>
     <div class="top-bar">
-        <div class="top-items">
-            <ul>
-                <li>ENGLISH</li> |
-                <li>最新动态</li>                
-            </ul>
+        <div class="wrap">
+            <div class="top-items">
+                <ul style="border: none;">
+                    <li>ENGLISH</li>
+                    <li>|</li>
+                    <li>最新动态</li>
+                </ul>
+            </div>
+            <img class="logo" src="imgs/logo.png" alt="">
         </div>
     </div>
     <div class="main-content">
         <div class="banner-content wrap">
-            <div class="swiper-container">
+            <div class="swiper-container index-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide"><img src="imgs/banner01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="imgs/banner02.png"> </div>
+                    <div class="swiper-slide"><img src="imgs/banner01.png" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/banner02.png"> </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 如果需要导航按钮 -->
+                    <!-- <div class="swiper-button-prev"></div> -->
+                    <!-- <div class="swiper-button-next"></div> -->
+                    <!-- 如果需要滚动条 -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-
-                <!-- 如果需要导航按钮 -->
-                <!-- <div class="swiper-button-prev"></div> -->
-                <!-- <div class="swiper-button-next"></div> -->
-
-                <!-- 如果需要滚动条 -->
-                <div class="swiper-scrollbar"></div>
             </div>
             <div class="nav-content">
                 <ul>
                     <li>
-                        <div></div>
-                        <header></header>
+                        <a href="./ablout.html">
+                            <div><img src="imgs/nav01.png" alt=""></div>
+                            <header>关于我们</header>
+                        </a>
                     </li>
                     <li>
-                        <div></div>
-                        <header></header>
+                        <a href="./mengte.html">
+                            <div><img src="imgs/nav02.png" alt=""></div>
+                            <header>教学特色</header>
+                        </a>
                     </li>
                     <li>
-                        <div></div>
-                        <header></header>
+                        <a href="./apply.html">
+                            <div><img src="imgs/nav03.png" alt=""></div>
+                            <header>申请入学</header>
+                        </a>
                     </li>
                     <li>
-                        <div></div>
-                        <header></header>
+                        <a href="./news.html">
+                            <div><img src="imgs/nav04.png" alt=""></div>
+                            <header>最新动态</header>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-
     </div>
     <div class="footer-bar">
-
+        <div class="wrap">
+            <img src="imgs/foot.png" alt="" style="width:100%">
+        </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper-3.4.2.min.js"></script>
